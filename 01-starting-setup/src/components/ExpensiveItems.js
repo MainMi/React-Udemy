@@ -1,5 +1,7 @@
 import ExpensiveItem from "./ExpensiveItem";
 
+import './ExpensiveItems.css'
+
 function ExpensiveItems(props) {
     const { expenses } = props;
     return <div className="expenses">
