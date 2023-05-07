@@ -1,0 +1,74 @@
+.itemBox {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    border: 1px solid #333;
+    border-radius: 10px;
+}
+
+.itemBox .price {
+    color: #ff9705;
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.itemBox .counter {
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.totalBox {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.totalBox .priceBox {
+    display: flex;
+    align-items: center;
+}
+
+.totalBox .priceBox .totalPrice {
+    padding-left: 10px;
+    color: #ff5d05;
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.totalBox .buttonBox {
+    display: flex;
+    align-items: center;
+}
+
+.totalBox .buttonBox .btn {
+    border-radius: 5px;
+    font-weight: 600;
+    padding: 10px 20px;
+    font-size: 18px;
+    border: none;
+    display: block;
+    background-color: #ff7a00;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+    cursor: pointer;
+}
+.totalBox .buttonBox .btn:last-child {
+    margin-left: 20px;
+}
+
+.CartItemBox {
+    position: relative;
+    width: 100%;
+    max-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}

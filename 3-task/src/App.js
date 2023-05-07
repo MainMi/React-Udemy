@@ -5,41 +5,44 @@ import NewExpensiveItem from "./components/newExpensive/NewExpensiveItem";
 function App() {
   const DUMMY_EXPENSES = [
     {
-      id: 'e1',
-      title: 'Toilet Paper',
-      amount: 94.12,
-      date: new Date(2020, 7, 14),
-    },
-    { id: 'e2',
-      title: 'New TV',
-      amount: 799.49, 
-      date: new Date(2021, 2, 12)
-    },
-    {
-      id: 'e3',
-      title: 'Car Insurance',
-      amount: 294.67,
-      date: new Date(2021, 2, 28),
-    },
-    {
-      id: 'e4',
-      title: 'New Desk (Wooden)',
-      amount: 450,
-      date: new Date(2021, 5, 12),
-    },
+      id: '32324234',
+      title: 'Test count',
+      amount: 100,
+      date: new Date(2022, 7, 14),
+    }
   ];
-
-  const [ expenses, setExpenses ] = useState(DUMMY_EXPENSES);
+  let localStorageExpenses = JSON.parse(localStorage.getItem('expenses'));
+  if (localStorageExpenses?.length > 0) {
+    localStorageExpenses = localStorageExpenses.map((value) => {
+      return { ...value, date: new Date(value.date) };
+    })
+  }
+  console.table(localStorageExpenses);
+  
+  const [ expenses, setExpenses ] = useState(
+    localStorageExpenses
+      ? localStorageExpenses
+      : DUMMY_EXPENSES
+  );
 
   const addExpensiveHandler = expense => {
     setExpenses((prevExpense) => {
-      return [expense, ...prevExpense];
+      const newExpenses = [expense, ...prevExpense];
+      localStorage.setItem('expenses', JSON.stringify(newExpenses))
+      return [...newExpenses];
+    })
+  }
+  const deleteExpensiveHandler = index => {
+    setExpenses((prevExpense) => {
+      prevExpense.splice(index, 1);
+      localStorage.setItem('expenses', JSON.stringify(prevExpense))
+      return [...prevExpense];
     })
   }
   return (
     <div>
       <NewExpensiveItem onAddExpensiveData={addExpensiveHandler} />
-      <ExpensiveItems expenses={ expenses } onAddExpense={addExpensiveHandler} />
+      <ExpensiveItems expenses={ expenses } onAddExpense={addExpensiveHandler} onDeleteExpensiveIndex={deleteExpensiveHandler}/>
     </div>
   );
 }

@@ -1,0 +1,13 @@
+.contentBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    min-height: 300px;
+    border: 1px solid #111;
+    border-radius: 20px;
+    align-self: center;
+    padding: 30px;
+    margin: 0 auto;
+}

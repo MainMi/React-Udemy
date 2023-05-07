@@ -1,8 +1,16 @@
+.expensiveList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+}
+
 .expense-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem;
+    width: 100%;
     margin: 1rem;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     border-radius: 12px;
@@ -11,10 +19,9 @@
 
 .expense-item__description {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 1rem;
-    align-items: flex-end;
-    flex-flow: column-reverse;
+    align-items: center;
     justify-content: flex-start;
     flex: 1;
 }
@@ -34,6 +41,11 @@
     border: 1px solid white;
     padding: 0.5rem;
     border-radius: 12px;
+}
+
+.expense-item__button {
+    font-size: 1rem;
+    padding: 0.5rem;
 }
 
 @media (min-width: 580px) {

@@ -14,10 +14,14 @@ function NewExpensiveForm (props) {
 
     const submitHandler = (ev) => {
         ev.preventDefault();
+        if (!enteredDate || !enteredPrice || !enteredTitle) {
+            return;
+        }
         let submitData = {
             title: enteredTitle,
             amount: enteredPrice,
-            date: enteredDate
+            date: enteredDate,
+            id: Math.random().toString()
         }
         props.onBubleSubmitHandler(submitData);
         setEnteredTitle('');
