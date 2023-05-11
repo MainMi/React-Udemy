@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap');
+
+* {
+    font-family: 'Nunito', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.backgroundBox {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-color: #C2E274;
+}
+
+.registerBox {
+    display: flex;
+    width: 80vw;
+    height: 85vh;
+    background-color: #F2E8CF;
+    border-radius: 10px;
+}
+
+.registerBox .registerForm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 0 0 50%;
+    padding: 48px 80px;
+}
+
+.registerBox .registerForm .buttonBox {
+    display: flex;
+}
+
+.registerBox .registerForm .buttonBox .btn {
+    padding: 7px 10px;
+    font-size: 16px;
+    background-color: #BC4749;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+}
+.registerBox .registerForm .buttonBox .btn.unactive {
+    padding: 7px 15px;
+    background-color: transparent;
+    color: #BC4749;
+    border: none;
+}
+
+
+.registerBox .registerForm .dataBox {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 100%;
+}
+.registerBox .registerForm .dataBox .labelBox {
+    padding-left: 10px;
+}
+.registerBox .registerForm .dataBox .labelBox:first-child {
+    padding-left: 0px;
+}
+
+.registerBox .registerForm .labelBox .labelText {
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+
+.registerBox .registerForm .labelBox {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    padding-top: 10px;
+}
+.registerBox .registerForm .labelBox input {
+    position: relative;
+    width: 100%;
+    font-size: 14px;
+    border-radius: 15px;
+    border: 1px solid #B2B5AC;
+    background-color: #F2E8CF;
+    padding: 8px 12px;
+    outline: none;
+}
+.registerBox .registerForm .labelBox input:focus {
+    border: 1px solid #A7C957;
+}
+.registerBox .registerForm .labelBox input::placeholder {
+    color: #B2B5AC;
+}
+
+.registerBox .registerForm .labelBox .errorInput {
+    border: 1px solid #D17C7C!important;
+}
+
+.registerBox .registerForm .labelBox .errorMsg {
+    padding-top: 5px;
+    font-weight: 400;
+    color: #D17C7C;
+    font-size: .75rem;
+}
+
+.registerBox .registerForm .btnSubmit {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #BC4749;
+    justify-self: flex-end;
+    color: #fff;
+    font-weight: 700;
+    border-radius: 20px;
+    border: none;
+    margin-top: auto;
+}
+.registerBox .registerForm .btnSubmit:disabled {
+    background-color: #BC9595;
+}
+
+
+
+.imageBox {
+    position: relative;
+    flex: 0 0 50%;
+    width: 100%;
+    height: 100%;
+}
+.imageBox img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
